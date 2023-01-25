@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@angular/compiler": "^15.1.0",
+    "@angular/core": "^15.1.0",
+    "@awesome-cordova-plugins/device": "^6.3.0",
+    "@awesome-cordova-plugins/speech-recognition": "^6.3.0",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.6.1",
     "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "4.6.1",
     "@capacitor/keyboard": "4.1.0",
     "@capacitor/status-bar": "4.1.1",
     "@ionic/react": "^6.0.0",
@@ -19,6 +24,11 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
+    "angular": "^1.8.3",
+    "capacitor-voice-recorder": "^4.0.2",
+    "cordova-plugin-device": "^2.1.0",
+    "cordova-plugin-speechrecognition": "^1.2.0",
+    "eslint-config-react-app": "^7.0.1",
     "history": "^4.9.0",
     "ionicons": "^6.0.3",
     "react": "^18.2.0",
@@ -43,7 +53,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "watch": "ionic capacitor run ios -l --external",
+    "build": "DISABLE_ESLINT_PLUGIN=true; react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionic/react-router|@ionic/core|@stencil/core|ionicons)/)'",
     "eject": "react-scripts eject"
   },
@@ -66,7 +77,8 @@
     ]
   },
   "devDependencies": {
-    "@capacitor/cli": "4.6.1"
+    "@capacitor/cli": "4.6.1",
+    "@types/react-speech-recognition": "^3.9.0"
   },
   "description": "An Ionic project"
 }
